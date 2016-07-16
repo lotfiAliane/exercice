@@ -1,0 +1,14 @@
+exo_user_homepage:
+    path:     /
+    defaults: { _controller: FOSUserBundle:Profile:show}
+
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix:   /profile
+
+exo_user_moncarnet:
+    path:     /{id}/moncarnet
+    defaults: { _controller: ExoUserBundle:Default:view}
+    requirements:
+         id: \d+

@@ -1,0 +1,11 @@
+{% extends 'ExoUserBundle::layout.html.twig' %}
+
+{% block body %}
+<div class="fos_user_user_show">
+    <p>Pseudo {{ user.username }} {{ user.id }}</p>
+    <p>Email {{ user.email }}</p>
+   <a href=" {{path("exo_user_moncarnet",{id: user.id})}} " title="voir  " >Mes contacts </a>
+   
+   <p><a href=" {{path("exo_carnet_ajout")}} " title="voir  " >Ajouter</a></p>
+</div>
+{% endblock %}

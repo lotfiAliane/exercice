@@ -1,0 +1,8 @@
+{% for membre in carnets %}
+<a href=" {{path("exo_carnet_voir",{id: membre.id})}} " title="voir {{membre.mail}} " >{{membre.mail}} </a>
+{{membre.adresse}}
+{{membre.telephone}}
+{{membre.siteWeb}}
+<a href=" {{path("exo_carnet_editer",{id: membre.id})}} " title="voir {{membre.mail}} " >editer </a>
+<a href=" {{path("exo_carnet_suprimer",{id: membre.id})}} " title="voir {{membre.mail}} " >suprimer </a>
+{% endfor %}

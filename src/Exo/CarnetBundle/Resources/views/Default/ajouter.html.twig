@@ -1,0 +1,8 @@
+{% extends 'ExoUserBundle::layout.html.twig' %}
+
+{% block body %}
+<form action="{{ path("exo_carnet_ajout") }}" method="post">
+{{form_widget(form)}}
+<input type="submit">
+</form>
+{% endblock %}

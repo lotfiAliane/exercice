@@ -1,0 +1,28 @@
+
+exo_carnet_carnet:
+    path:     /{id}/carnet
+    defaults: { _controller: ExoCarnetBundle:Default:index }
+    requirements:
+        id: \d+
+    
+exo_carnet_ajout:
+    path:     /ajout
+    defaults: { _controller: ExoCarnetBundle:Default:ajouter }
+
+exo_carnet_voir:
+    path:     /{id}/voir
+    defaults: { _controller: ExoCarnetBundle:Default:voir }
+    requirements:
+        id: \d+
+
+exo_carnet_editer:
+    path:     /{id}/editer
+    defaults: { _controller: ExoCarnetBundle:Default:editer }
+    requirements:
+        id: \d+
+
+exo_carnet_suprimer:
+    path:     /{id}/suprimer
+    defaults: { _controller: ExoCarnetBundle:Default:suprimer }
+    requirements:
+        id: \d+

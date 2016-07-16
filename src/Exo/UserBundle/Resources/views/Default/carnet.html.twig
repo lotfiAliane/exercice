@@ -1,0 +1,15 @@
+{% extends 'ExoUserBundle::layout.html.twig' %}
+
+{% block body %}
+<div >
+{% for membre in listApplications %}
+    <p> e-mail : {{ membre.mail }} </p>
+    <p> adress : {{ membre.adresse }}</p>
+    <p> telephone:{{ membre.telephone }}</p>
+    <p> site web: <a href=" {{membre.siteWeb}} " title="voir  " >{{membre.siteWeb}} </a></p>
+    <p><a href=" {{path("exo_carnet_editer",{id: membre.id})}} " title="modifier " > modifier </a><p>
+    <a href=" {{path("exo_carnet_suprimer",{id: membre.id})}} " title="voir {{membre.mail}} " > supprimer </a>
+{% endfor %}  
+
+</div>
+{% endblock %}
